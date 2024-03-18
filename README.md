@@ -1,7 +1,7 @@
 # Project Name :International Tourism Management System
 <!-- #### This is Course project for CS-207. Build by group: G-4  -->
   
-Amaan Ullah Siddiqui +91 7354941446
+
 <!-- <hr>
 
 Visit http://harshit123.pythonanywhere.com for live demo. Frontend and Backend working. -->
@@ -20,4 +20,4 @@ Users Guest
 User can register yourself. User can login with valid email and password. User can both define its own package (Customized Package) or select predefined Package from the list given. Can see his selected packages and confirm them by doing payment.
 
 ## Guest users—
-Visit the Website as a Guest user for enquiry about hotels and packages.
+Visit the Website as a Guest user for enquiry about hotels and packages.# Tourism-Websites
