@@ -1,0 +1,13 @@
+body {
+  font-family: "Red Hat Display", sans-serif;
+  font-weight: 400;
+  perspective: 2000px;
+  background-size: cover;
+  background-image: url(../Elements/show_booking_background.jpg);
+}
+table {
+  padding: 0;
+  margin: 0;
+  border: none;
+}
+

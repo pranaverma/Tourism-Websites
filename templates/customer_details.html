@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags-->
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <!-- Title Page-->
+    <title>Customer Details</title>
+
+    <!-- Icons font CSS-->
+    <link
+      href="../static/vendor/mdi-font/css/material-design-iconic-font.min.css"
+      rel="stylesheet"
+      media="all"
+    />
+    <link
+      href="../static/css/font-awesome.min.css"
+      rel="stylesheet"
+      media="all"
+    />
+    <!-- Font special for pages-->
+    <link
+      href="https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i"
+      rel="stylesheet"
+    />
+
+    <!-- Vendor CSS-->
+    <link href="../static/css/select2.min.css" rel="stylesheet" media="all" />
+    <link
+      href="../static/css/daterangepicker.css"
+      rel="stylesheet"
+      media="all"
+    />
+
+    <!-- Main CSS-->
+    <link
+      href="../static/css/customer_detail.css"
+      rel="stylesheet"
+      media="all"
+    />
+  </head>
+
+  <body>
+    <div class="page-wrapper bg-gra-02 p-t-130 p-b-100 font-poppins">
+      <div class="wrapper wrapper--w680">
+        <div class="card card-4">
+          <div class="card-body">
+            <h2 class="title">Customer Details</h2>
+            <form action="/customer" method="POST">
+              <div id="Div1" class="row row-space" style="color: rgb(155, 117, 46); font-style: italic; font-size: 15px;margin: 20px;">
+                <p>If you have already filled this form then <a href="{{ url_for('choose_package')}}">Click Here</a> to proceed.</p>
+              </div>
+              <div id="Div2" class="row row-space" style="margin: 20px;color: red; font-size: 15px;">
+                {% with messages = get_flashed_messages() %}
+                  {% if messages %}
+                    <p>{{ messages[0] }} <a href="{{ url_for('choose_package')}}">Click Here</a> to proceed.</p>
+                  {% endif %}
+                {% endwith %}
+              </div>
+              <div class="row row-space">
+                <div class="col-2">
+                  <div class="input-group">
+                    <label class="label">first name</label>
+                    <input
+                      class="input--style-4"
+                      type="text"
+                      name="first_name"
+                      required
+                    />
+                  </div>
+                </div>
+                <div class="col-2">
+                  <div class="input-group">
+                    <label class="label">last name</label>
+                    <input
+                      class="input--style-4"
+                      type="text"
+                      name="last_name"
+                    />
+                  </div>
+                </div>
+              </div>
+              <div class="row row-space">
+                <div class="col-2">
+                  <div class="input-group">
+                    <label class="label">Birthday</label>
+                    <div class="input-group-icon">
+                      <input
+                        class="input--style-4 js-datepicker"
+                        type="text"
+                        name="dob"
+                        required
+                      />
+                      <i
+                        class="
+                          zmdi zmdi-calendar-note
+                          input-icon
+                          js-btn-calendar
+                        "
+                      ></i>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-2">
+                  <div class="input-group">
+                    <label class="label">Gender</label>
+                    <div class="p-t-10">
+                      <label class="radio-container m-r-45"
+                        >Male
+                        <input
+                          type="radio"
+                          value="Male"
+                          checked="checked"
+                          name="gender"
+                        />
+                        <span class="checkmark"></span>
+                      </label>
+                      <label class="radio-container"
+                        >Female
+                        <input type="radio" value="Female" name="gender" />
+                        <span class="checkmark"></span>
+                      </label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row row-space">
+                <div class="col-2">
+                  <div class="input-group">
+                    <label class="label">Email</label>
+                    <input
+                      class="input--style-4"
+                      type="email"
+                      name="email"
+                      required
+                    />
+                  </div>
+                </div>
+                <div class="col-2">
+                  <div class="input-group">
+                    <label class="label">Country</label>
+                    <input
+                      class="input--style-4"
+                      type="text"
+                      name="country"
+                      required
+                    />
+                  </div>
+                </div>
+              </div>
+              <div class="row row-space">
+                <div class="col-2">
+                  <div class="input-group">
+                    <label class="label">Mobile Number</label>
+                    <input
+                      class="input--style-4"
+                      type="number"
+                      name="mobile_number"
+                      required
+                    />
+                  </div>
+                </div>
+                <div class="col-2">
+                  <div class="input-group">
+                    <label class="label">Alternate Mobile Number</label>
+                    <input
+                      class="input--style-4"
+                      type="number"
+                      name="alternate_mobile_number"
+                      required
+                    />
+                  </div>
+                </div>
+              </div>
+              <div class="row row-space">
+                <div class="col-2">
+                  <div class="input-group">
+                    <label class="label">Address (Line-1)</label>
+                    <input
+                      class="input--style-4"
+                      type="text"
+                      name="address1"
+                      required
+                    />
+                  </div>
+                </div>
+                <div class="col-2">
+                  <div class="input-group">
+                    <label class="label">Address (Line-2)</label>
+                    <input
+                      class="input--style-4"
+                      type="text"
+                      name="address2"
+                      required
+                    />
+                  </div>
+                </div>
+              </div>
+              <div class="row row-space">
+                <div class="col-2">
+                  <div class="input-group">
+                    <label class="label">Preferred Language</label>
+                    <input class="input--style-4" type="text" name="language" />
+                  </div>
+                </div>
+                <div class="col-2">
+                  <div class="input-group">
+                    <label class="label">Passport Number</label>
+                    <input
+                      class="input--style-4"
+                      type="text"
+                      name="passport_number"
+                      required
+                    />
+                  </div>
+                </div>
+              </div>
+              <div class="input-group">
+                <label class="label">Currency</label>
+                <div class="rs-select2 js-select-simple select--no-search">
+                  <select name="currency">
+                    <option disabled="disabled" selected="selected">
+                      Choose option
+                    </option>
+                    <option value="U.S. Dollar">U.S. Dollar (USD)</option>
+                    <option value="European Euro">European Euro (EUR)</option>
+                    <option value="Japanese Yen">Japanese Yen (JPY)</option>
+                    <option value="British Pound">British Pound (GBP)</option>
+                    <option value="Swiss Franc">Swiss Franc (CHF)</option>
+                    <option value="Canadian Dollar">
+                      Canadian Dollar (CAD)
+                    </option>
+                    <option value="Australian Dollar">
+                      Australian Dollar (AUD)
+                    </option>
+                    <option value="New Zealand Dollar">
+                      New Zealand Dollar (NZD)
+                    </option>
+                    <option value="South African Rand">
+                      South African Rand (ZAR)
+                    </option>
+                  </select>
+                  <div class="select-dropdown"></div>
+                </div>
+              </div>
+              <div class="p-t-15">
+                <button class="btn btn--radius-2 btn--blue" type="submit">
+                  Submit
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Jquery JS-->
+    <script src="../static/js/jquery.min.js"></script>
+    <!-- Vendor JS-->
+    <script src="../static/js/select2.min.js"></script>
+    <script src="../static/js/moment.min.js"></script>
+    <script src="../static/js/daterangepicker.js"></script>
+
+    <!-- Main JS-->
+    <script src="../static/js/global.js"></script>
+  </body>
+</html>

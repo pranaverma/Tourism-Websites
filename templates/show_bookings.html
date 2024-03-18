@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>See Bookings</title>
+    <link rel="stylesheet" href="../static/css/show_bookings.css">
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@1,300&family=Montserrat&family=Sacramento&display=swap"
+        rel="stylesheet">
+
+        <link rel="icon" href="../static/Elements/favicon.ico" />
+
+        <!-- Font Awesome -->
+        <script
+          src="https://kit.fontawesome.com/1b8fe30047.js"
+          crossorigin="anonymous"
+        ></script>
+    
+        <!-- Bootstrap Scripts -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous" />
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+
+      </head>
+      
+      <body>
+        <div style="text-align: center;margin: 40px auto;">
+        <h2 style="color: white;font-style: italic;">See Your Bookings Here</h2>
+        </div>
+        <div style="width: 75%; margin: auto;">
+        {% if bookings|length == 0 %}
+        <div class="alert alert-dark" role="alert">
+          No Customized Package found!
+        </div>
+        {% else %}
+        <h2 style="color: white;">Customized Package:</h2>
+            <table class="table table-striped table-hover rounded-3">
+            <thead class="bg-dark">
+                <tr style="color: white;">
+                    <th>Sno.</th>
+                    <th>Country Name</th>
+                    <th>Departing</th>
+                    <th>Number Of Days</th>
+                    <th>Number of People</th>
+                    <th>Payment</th>
+                    <th>options</th>
+                </tr>
+            </thead>
+            <tbody class="bg-light">
+                {% for member in bookings %}
+                <tr>
+                    <td>{{loop.index}}</td>
+                    <td>{{member.Country}}</td>
+                    <td>{{member.Start_date}}</td>
+                    <td>{{member.Number_of_days}}</td>
+                    <td>{{member.Number_of_people}}</td>
+                    <td>{{member.Progress}}</td>
+                    <td><a href="/delete/{{member.Booking_ID}}" type="button" onclick="check()" class="btn btn-outline-dark btn-sm mx-1">Cancel</button>
+                    {% if member.Progress == "Not Completed" %}
+                    <a href="{{ url_for('payment_details')}}" type="button" class="btn btn-outline-dark btn-sm mx-1">Pay</button>
+                    {% else %}
+                    <a href="{{ url_for('feedback')}}" type="button" class="btn btn-outline-dark btn-sm mx-1">FeedBack</button></td>
+                    {% endif %}
+                </tr>
+                {% endfor %}
+            </tbody>
+            </table>
+            {% endif %}
+        </div>
+        <br>
+        <div style="width: 75%; margin: auto;">
+            {% if packages|length == 0 %}
+            <div class="alert alert-dark" role="alert">
+              No Predefined Package found!
+            </div>
+            {% else %}
+            <h2 style="color: white;">Predefined Package:</h2>
+                <table class="table table-striped table-hover rounded-3">
+                <thead class="bg-dark">
+                    <tr style="color: white;">
+                        <th>Sno.</th>
+                        <th>Package Name</th>
+                        <th>Departing</th>
+                        <th>Number Of Days</th>
+                        <th>Number of People</th>
+                        <th>Payment</th>
+                        <th>options</th>
+                    </tr>
+                </thead>
+                <tbody class="bg-light">
+                    {% for member in packages %}
+                    <tr>
+                        <td>{{loop.index}}</td>
+                        <td>{{member.Package_name}}</td>
+                        <td>{{member.Departing_date}}</td>
+                        <td>{{member.Number_of_days}}</td>
+                        <td>{{member.Number_of_people}}</td>
+                        <td>{{member.Progress}}</td>
+                        <td><a href="/deleteP/{{member.Booking_ID}}" type="button" onclick="check()" class="btn btn-outline-dark btn-sm mx-1">Cancel</button>
+                            {% if member.Progress == "Not Completed" %}
+                            <a href="{{ url_for('payment_details')}}" type="button" class="btn btn-outline-dark btn-sm mx-1">Pay</button>
+                            {% else %}
+                            <a href="{{ url_for('feedback')}}" type="button" class="btn btn-outline-dark btn-sm mx-1">FeedBack</button></td>
+                            {% endif %}
+                    </tr>
+                    {% endfor %}
+                </tbody>
+                </table>
+                {% endif %}
+            </div>
+        <script>
+            function check(){
+              alert("Are you sure, you want to cancel your booking.");
+            }
+          </script>
+    </body>

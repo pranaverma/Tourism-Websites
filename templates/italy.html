@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="../static/css/cities.css" />
+  <title>Italy</title>
+  <link rel="icon" href="../static/Elements/favicon.ico" />
+
+    <!-- Font Awesome -->
+    <script
+      src="https://kit.fontawesome.com/1b8fe30047.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- Bootstrap Scripts -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous" />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    
+    <style>
+      .top-container {
+        background: black !important;
+        opacity: 0.7;
+      }
+      .logo {
+        width: 80px;
+        height: 80px;
+        margin: auto 100px auto 80px;
+      }
+      .bottom-container {
+        background-color: rosybrown;
+        height: 90px;
+      }
+      .container {
+        width: 8000px;
+        height: 90px;
+        display: flex;
+      }
+      .certificate {
+        width: 100px;
+        height: 70px;
+      }
+      .certificateverisign {
+        width: 150px;
+        height: 80px;
+      }
+      .list {
+        width: 70px;
+        height: 40px;
+        margin: auto 5px;
+      }
+      .bottom-middle {
+        width: 130px;
+      }
+    </style>
+  </head>
+</head>
+
+<body>
+
+  <!-- Header-->
+  <nav class="navbar navbar-expand-sm navbar-dark top-container">
+    <div class="container-fluid">
+      <img class="logo" src="../static/Elements/Logo.jpg" />
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item px-2">
+            <a class="nav-link" aria-current="page" href="{{ url_for('home')}}">Home</a>
+          </li>
+          <li class="nav-item px-4">
+            <a class="nav-link" href="{{ url_for('aboutus')}}">About Us</a>
+          </li>
+          <li class="nav-item px-2">
+            <a class="nav-link" href="{{ url_for('countries')}}">Countries</a>
+          </li>
+          <li class="nav-item dropdown px-4">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Hotels
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="{{ url_for('australia_hotel')}}">Australia</a>
+              <a class="dropdown-item" href="{{ url_for('italy_hotel')}}">Italy</a>
+              <a class="dropdown-item" href="{{ url_for('switzerland_hotel')}}">Switzerland</a>
+              <a class="dropdown-item" href="{{ url_for('mauritius_hotel')}}">Mauritius</a>
+              <a class="dropdown-item" href="{{ url_for('france_hotel')}}">France</a>
+              <a class="dropdown-item" href="{{ url_for('greece_hotel')}}">Greece</a>
+              <a class="dropdown-item" href="{{ url_for('hong_kong_hotel')}}">Hong Kong</a>
+              <a class="dropdown-item" href="{{ url_for('uae_hotel')}}">UAE</a>
+            </div>
+          </li>
+          <li class="nav-item px-2">
+            <a class="nav-link" href="{{ url_for('travel_agent_register')}}">Travel Agent Registration</a>
+          </li>
+          <li class="nav-item dropdown px-4">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Packages
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="{{ url_for('australia_package')}}">Australia Package</a>
+              <a class="dropdown-item" href="{{ url_for('italy_package')}}">Italy Package</a>
+              <a class="dropdown-item" href="{{ url_for('switzerland_package')}}">Switzerland Package</a>
+              <a class="dropdown-item" href="{{ url_for('mauritius_package')}}">Mauritius Package</a>
+              <a class="dropdown-item" href="{{ url_for('france_package')}}">France Package</a>
+              <a class="dropdown-item" href="{{ url_for('greece_package')}}">Greece Package</a>
+              <a class="dropdown-item" href="{{ url_for('hong_kong_package')}}">Hong Kong Package</a>
+              <a class="dropdown-item" href="{{ url_for('uae_package')}}">UAE Package</a>
+              <a class="dropdown-item" href="{{ url_for('italy_and_switzerland')}}">Italy and Switzerland</a>
+              <a class="dropdown-item" href="{{ url_for('greece_and_italy')}}">Greece and Italy</a>
+              <a class="dropdown-item" href="{{ url_for('classical_europe')}}">Classical Europe</a>
+              <a class="dropdown-item" href="{{ url_for('fantastic_four')}}">Fantastic Four</a>
+            </div>
+          </li>
+          
+        </ul>
+        <ul class="navbar-nav navbar-right">
+          <li></li>
+          <li>
+            <i class="nav-link fas fa-user-plus fa-lg"></i
+            ><a class="nav-link" href="{{ url_for('admin')}}"> Sign Up</a>
+          </li>
+          <li class="px-1">
+            <i class="nav-link fas fa-sign-in-alt fa-lg"></i
+            ><a class="nav-link" href="{{ url_for('admin')}}"> Login</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <!-- Header-->
+
+  <div>
+    <img id="country" src="../static/Countries/italy.jpg" alt="Italy image" />
+    <h1>Italy</h1>
+  </div>
+
+  <h2>Cities</h2>
+
+  <div class="WholeCity">
+    <h3>Rome</h3>
+    <div>
+      <img class="pic_city" src="../static/Italy/rome.jpg" />
+
+      <p class="cityInfo">The capital of Italy, Rome is a multifaceted metropolis steeped in a rich history of culture. Located on the central western side of the Italian peninsula, the city was founded on the shores of the river Tiber and has an independent country, the Vatican City, within it's borders. The city occupies a central position in Western history</p>
+    </div>
+
+    <div class="cities">
+      <div class="item">
+        <img class="city" src="../static/Italy/rome(1).jpg" alt="The_Colosseum" />
+        <span class="captions">The_Colosseum</span>
+      </div>
+
+      <div class="item">
+        <img class="city" src="../static/Italy/rome(2).jpg" alt="Piazza_Navona" />
+        <span class="captions">Piazza_Navona</span>
+      </div>
+
+      <div class="item">
+        <img class="city" src="../static/Italy/rome(3).jpg" alt="EUR"  />
+        <span class="captions">EUR</span>
+      </div>
+
+      <div class="item">
+        <img class="city" src="../static/Italy/rome(4).jpg" alt="Vatican_Museums" />
+        <span class="captions">Vatican_Museums</span>
+      </div>
+    </div>
+    <div></div>
+  </div>
+
+  <div class="WholeCity">
+    <h3>Venice</h3>
+    <div>
+      <img class="pic_city" src="../static/Italy/venice.jpg" />
+
+      <p class="cityInfo">A beautiful city known for its interconnected canals and its gondola rides. Equal measures of romance and culture makes this city beautiful and breathtaking. This place is like nothing you imagined, even if you have seen it in movies and photos, it is totally dreamlike!  </p>
+    </div>
+
+    <div class="cities">
+      <div class="item">
+        <img class="city" src="../static/Italy/venice(1).jpg" alt="St._Markls_Square" />
+        <span class="captions">St._Markls_Square</span>
+      </div>
+
+      <div class="item">
+        <img class="city" src="../static/Italy/venice(2).jpg" alt="Academia_Gallery" />
+        <span class="captions">Academia_Gallery</span>
+      </div>
+
+      <div class="item">
+        <img class="city" src="../static/Italy/venice(3).jpg" alt="Ca'Rezzonico" />
+        <span class="captions">Ca'Rezzonico</span>
+      </div>
+
+      <div class="item">
+        <img class="city" src="../static/Italy/venice(4).jpg" alt="San_Giorgio_Maggiore" />
+        <span class="captions">San_Giorgio_Maggiore</span>
+      </div>
+    </div>
+    <div></div>
+  </div>
+
+  <div class="WholeCity">
+    <h3>Milan</h3>
+    <div>
+      <img class="pic_city" src="../static/Italy/milan.jpg" />
+
+      <p class="cityInfo">Milan is one of the most important cities of Europe. It is best known for its fashion, art, culture and tourism. It is the first most populous city of Italy. It also hosts the Italian stock exchange. Milan's theatres, museums and landmarks make it a popular tourist destination and has a high number of accredition from the Michelin guide and is home to major football clubs.</p>
+    </div>
+
+    <div class="cities">
+      <div class="item">
+        <img class="city" src="../static/Italy/milan(1).jpg" alt="The_Last_Supper" />
+        <span class="captions">The_Last_Supper</span>
+      </div>
+
+      <div class="item">
+        <img class="city" src="../static/Italy/milan(2).jpg" alt="Milan_Cathedral" />
+        <span class="captions">Milan_Cathedral</span>
+      </div>
+
+      <div class="item">
+        <img class="city" src="../static/Italy/milan(3).jpg" alt="Sforza_Castle" />
+        <span class="captions">Sforza_Castle</span>
+      </div>
+
+      <div class="item">
+        <img class="city" src="../static/Italy/milan(4).jpg" alt="San_Siro_Stadium" />
+        <span class="captions">San_Siro_Stadium</span>
+      </div>
+    </div>
+    <div></div>
+  </div>
+
+  <div class="WholeCity">
+    <h3>Florence</h3>
+    <div>
+      <img class="pic_city" src="../static/Italy/florence.jpg" />
+
+      <p class="cityInfo">Florence is the capital city of Tuscany and the Metropolitan City of Florence.
+         This city is endowed with rich historical and cultural heritage. Located between Piedmont and 
+         the Coastal Regions of South Carolina, this is the largest city in the North-east part of South
+          Carolina. The Arno river flows through this city.</p>
+    </div>
+
+    <div class="cities">
+      <div class="item">
+        <img class="city" src="../static/Italy/florence(1).jpg" alt="The_Ufizzi_Gallery" />
+        <span class="captions">The_Ufizzi_Gallery</span>
+      </div>
+
+      <div class="item">
+        <img class="city" src="../static/Italy/florence(2).jpg" alt="The_Duomo" />
+        <span class="captions">The_Duomo</span>
+      </div>
+
+      <div class="item">
+        <img class="city" src="../static/Italy/florence(3).jpg" alt="Villa_de_Pratolino" />
+        <span class="captions">Villa_de_Pratolino</span>
+      </div>
+
+      <div class="item">
+        <img class="city" src="../static/Italy/florence(4).jpg" alt="Ponte_Vecchio" />
+        <span class="captions">Ponte_Vecchio</span>
+      </div>
+    </div>
+    <div></div>
+  </div>
+
+
+  <!--Footer-->
+  <div class="bottom-container">
+    <div class="container">
+      <div style="margin: 5px 30px">
+        <img
+          class="certificate"
+          src="../static/Elements/PCI-certified-Logo.png"
+        />
+      </div>
+      <div
+        style="
+          margin: 5px 30px 5px 0;
+          border-right: 1px solid rgb(143, 87, 87);
+        "
+      >
+        <img
+          class="certificateverisign"
+          src="../static/Elements/verisign.png"
+        />
+      </div>
+      <div class="bottom-middle">
+        <p style="padding-top: 30px; color: brown">Connect with us:</p>
+      </div>
+      <div class="bottom-middle" style="margin: 30px 40px auto 10px">
+        <a href="https://www.facebook.com/profile.php?id=100074840077412" style="color: #3b5998;"><i class="fab fa-facebook-square fa-lg"></i></a>
+        <a href="https://twitter.com/Prathme38179368?t=MxRory4ygSyWuQnENPsiDg&s=09" style="color: #1da1f2;"><i class="fab fa-twitter-square fa-lg"></i></a>
+        <a href="https://youtube.com/channel/UCxgaa-Jpo_B0t8kCpGOLmmA" style="color: #ff0000;"><i class="fab fa-youtube fa-lg"></i></a>
+        <a href="https://www.instagram.com/protravelo/" style="color: #8a3ab9;"><i class="fab fa-instagram-square fa-lg"></i></a>
+      </div>
+      <div style="margin: auto 20px">
+        <img class="list" src="../static/Elements/visa.png" />
+        <img class="list" src="../static/Elements/mastercard.png" />
+        <img class="list" src="../static/Elements/american express.png" />
+        <img class="list" src="../static/Elements/dinersclub.png" />
+        <img class="list" src="../static/Elements/rupay.png" />
+        <img class="list" src="../static/Elements/emi.png" />
+        <img
+          class="list"
+          style="height: 90px"
+          src="../static/Elements/netbanking.png"
+        />
+      </div>
+    </div>
+  </div>
+  <div
+    style="height: 60px; text-align: center; background: rgb(221, 203, 203)"
+  >
+    <p style="color: rgb(192, 122, 122)">
+      Customer care number: 9852467312<br>
+      Copyright <i class="far fa-copyright"></i> 2021 Protravelo Online
+      Private Limited, India. All rights reserved
+    </p>
+  </div>
+
+</body>
+
+</html>

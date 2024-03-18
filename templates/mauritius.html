@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="../static/css/cities.css" />
+  <title>Mauritius</title>
+  <link rel="icon" href="../static/Elements/favicon.ico" />
+
+    <!-- Font Awesome -->
+    <script
+      src="https://kit.fontawesome.com/1b8fe30047.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- Bootstrap Scripts -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous" />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    
+    <style>
+      .top-container {
+        background: black !important;
+        opacity: 0.7;
+      }
+      .logo {
+        width: 80px;
+        height: 80px;
+        margin: auto 100px auto 80px;
+      }
+      .bottom-container {
+        background-color: rosybrown;
+        height: 90px;
+      }
+      .container {
+        width: 8000px;
+        height: 90px;
+        display: flex;
+      }
+      .certificate {
+        width: 100px;
+        height: 70px;
+      }
+      .certificateverisign {
+        width: 150px;
+        height: 80px;
+      }
+      .list {
+        width: 70px;
+        height: 40px;
+        margin: auto 5px;
+      }
+      .bottom-middle {
+        width: 130px;
+      }
+    </style>
+  </head>
+</head>
+
+<body>
+
+  <!-- Header-->
+  <nav class="navbar navbar-expand-sm navbar-dark top-container">
+    <div class="container-fluid">
+      <img class="logo" src="../static/Elements/Logo.jpg" />
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item px-2">
+            <a class="nav-link" aria-current="page" href="{{ url_for('home')}}">Home</a>
+          </li>
+          <li class="nav-item px-4">
+            <a class="nav-link" href="{{ url_for('aboutus')}}">About Us</a>
+          </li>
+          <li class="nav-item px-2">
+            <a class="nav-link" href="{{ url_for('countries')}}">Countries</a>
+          </li>
+          <li class="nav-item dropdown px-4">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Hotels
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="{{ url_for('australia_hotel')}}">Australia</a>
+              <a class="dropdown-item" href="{{ url_for('italy_hotel')}}">Italy</a>
+              <a class="dropdown-item" href="{{ url_for('switzerland_hotel')}}">Switzerland</a>
+              <a class="dropdown-item" href="{{ url_for('mauritius_hotel')}}">Mauritius</a>
+              <a class="dropdown-item" href="{{ url_for('france_hotel')}}">France</a>
+              <a class="dropdown-item" href="{{ url_for('greece_hotel')}}">Greece</a>
+              <a class="dropdown-item" href="{{ url_for('hong_kong_hotel')}}">Hong Kong</a>
+              <a class="dropdown-item" href="{{ url_for('uae_hotel')}}">UAE</a>
+            </div>
+          </li>
+          <li class="nav-item px-2">
+            <a class="nav-link" href="{{ url_for('travel_agent_register')}}">Travel Agent Registration</a>
+          </li>
+          <li class="nav-item dropdown px-4">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Packages
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="{{ url_for('australia_package')}}">Australia Package</a>
+              <a class="dropdown-item" href="{{ url_for('italy_package')}}">Italy Package</a>
+              <a class="dropdown-item" href="{{ url_for('switzerland_package')}}">Switzerland Package</a>
+              <a class="dropdown-item" href="{{ url_for('mauritius_package')}}">Mauritius Package</a>
+              <a class="dropdown-item" href="{{ url_for('france_package')}}">France Package</a>
+              <a class="dropdown-item" href="{{ url_for('greece_package')}}">Greece Package</a>
+              <a class="dropdown-item" href="{{ url_for('hong_kong_package')}}">Hong Kong Package</a>
+              <a class="dropdown-item" href="{{ url_for('uae_package')}}">UAE Package</a>
+              <a class="dropdown-item" href="{{ url_for('italy_and_switzerland')}}">Italy and Switzerland</a>
+              <a class="dropdown-item" href="{{ url_for('greece_and_italy')}}">Greece and Italy</a>
+              <a class="dropdown-item" href="{{ url_for('classical_europe')}}">Classical Europe</a>
+              <a class="dropdown-item" href="{{ url_for('fantastic_four')}}">Fantastic Four</a>
+            </div>
+          </li>
+          
+        </ul>
+        <ul class="navbar-nav navbar-right">
+          <li></li>
+          <li>
+            <i class="nav-link fas fa-user-plus fa-lg"></i
+            ><a class="nav-link" href="{{ url_for('admin')}}"> Sign Up</a>
+          </li>
+          <li class="px-1">
+            <i class="nav-link fas fa-sign-in-alt fa-lg"></i
+            ><a class="nav-link" href="{{ url_for('admin')}}"> Login</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <!-- Header-->
+
+    <div>
+      <img id="country" src="../static/Mauritius/mauritius.jpg" alt="mauritius" />
+      <h1>Mauritius</h1>
+    </div>
+    <h2>Cities</h2>
+    <div class="WholeCity">
+      <h3>Curepipe</h3>
+      <div>
+        <img class="pic_city" src="../static/Mauritius/Curepipe/curepipe.jpg" />
+
+        <p class="cityInfo">One of the most well-known cities in Mauritius Curepipe, also known as La Ville-Lumière (meaning City of Lights) is built on one of the island's highest plateaus. Lush greenery, crystalline turquoise water and a perpetual rainy season are probably the first three things that can be used to describe Curepipe.</p>
+      </div>
+
+      <div class="cities">
+        <div class="item">
+          <img
+            class="city"
+            src="../static/Mauritius/Curepipe/carnegie_library.jpg"
+            alt="carnegie_library"
+          />
+          <span class="captions">Carnegie_library</span>
+        </div>
+
+        <div class="item">
+          <img
+            class="city"
+            src="../static/Mauritius/Curepipe/curepipe_botanical_garden.jpg"
+            alt="curepipe_botanical_garden"
+          />
+          <span class="captions">Curepipe_Botanical_garden</span>
+        </div>
+
+        <div class="item">
+          <img
+            class="city"
+            src="../static/Mauritius/Curepipe/domaine_de_aubineaux.jpg"
+            alt="domaine_de_aubineaux"
+          />
+          <span class="captions">Domaine_De_Aubineaux</span>
+        </div>
+
+        <div class="item">
+          <img
+            class="city"
+            src="../static/Mauritius/Curepipe/trou_aux_cerfs.jpg"
+            alt="trou_aux_cerfs"
+          />
+          <span class="captions">Trou_Aux_Cerfs</span>
+        </div>
+      </div>
+      <div></div>
+    </div>
+
+    <div class="WholeCity">
+      <h3>Flic-en-Flac</h3>
+      <div>
+        <img class="pic_city" src="../static/Mauritius/Flic-en-Flac/flic_en_flac.jpg" />
+
+        <p class="cityInfo">Flic en Flac, which was once an idyllic little beach town, is one of the most popular tourist areas in Mauritius second to Grand Baie. With its name translating to 'Free and Flat Land', which used to be an old Dutch proverb, Flic en Flac originally started out as a fishing village which was a hunting ground for wild birds and ducks. </p>
+      </div>
+
+      <div class="cities">
+        <div class="item">
+          <img
+            class="city"
+            src="../static/Mauritius/Flic-en-Flac/casela_world_of_adventures.jpg"
+            alt="casela_world_of_adventures"
+          />
+          <span class="captions">Casela_World</span>
+        </div>
+
+        <div class="item">
+          <img
+            class="city"
+            src="../static/Mauritius/Flic-en-Flac/dolphin_encounter_mauritius.jpg"
+            alt="dolphin_encounter_mauritius"
+          />
+          <span class="captions">Dolphin_encounter_Mauritius</span>
+        </div>
+
+        <div class="item">
+          <img
+            class="city"
+            src="../static/Mauritius/Flic-en-Flac/flic_en_flac_beach.jpg"
+            alt="flic_en_flac_beach"
+          />
+          <span class="captions">Flic_En_Flac_Beach</span>
+        </div>
+
+        <div class="item">
+          <img
+            class="city"
+            src="../static/Mauritius/Flic-en-Flac/tamarin_bay.jpg"
+            alt="tamarin_bay"
+          />
+          <span class="captions">Tamarin_Bay</span>
+        </div>
+      </div>
+      <div></div>
+    </div>
+
+    <div class="WholeCity">
+      <h3>Grand Baie</h3>
+      <div>
+        <img class="pic_city" src="../static/Mauritius/Grand Baie/grand_baie.jpg" />
+
+        <p class="cityInfo">Situated in the Mauritian district of Rivière du Rempart, Grand Baie (also known as Grand Bay) is a very popular tropical island retreat that serves as one of the top tourist destinations in the country. Like almost any other place in Mauritius, Grand Baie also has plenty of history attached to it. </p>
+      </div>
+
+      <div class="cities">
+        <div class="item">
+          <img
+            class="city"
+            src="../static/Mauritius/Grand Baie/grand_baie_beach.jpg"
+            alt="grand_baie_beach"
+          />
+          <span class="captions">Grand_Baie_Beach</span>
+        </div>
+
+        <div class="item">
+          <img
+            class="city"
+            src="../static/Mauritius/Grand Baie/grand_baie_la_croisette.jpg"
+            alt="grand_baie_la_croisette"
+          />
+          <span class="captions">Grand_Baie_La_Croisette</span>
+        </div>
+
+        <div class="item">
+          <img
+            class="city"
+            src="../static/Mauritius/Grand Baie/la_cuvette_beach.jpg"
+            alt="la_cuvette_beach"
+          />
+          <span class="captions">La_Cuvette_Beach</span>
+        </div>
+
+        <div class="item">
+          <img
+            class="city"
+            src="../static/Mauritius/Grand Baie/pereybere_beach.jpg"
+            alt="pereybere_beach"
+          />
+          <span class="captions">Gereybere_Beach</span>
+        </div>
+      </div>
+      <div></div>
+    </div>
+
+    <div class="WholeCity">
+      <h3>Port Louis</h3>
+      <div>
+        <img class="pic_city" src="../static/Mauritius/Port Louis/port_louis.jpg" />
+
+        <p class="cityInfo">Port Louis, the capital city of Mauritius, is one of the most popular destinations to visit in the country. It is a melting pot of glitz and glamour harmonising beautifully with traditions and customs from its 300-year-old past. Port Louis is fascinating in terms of its mix in culture, tradition and history.</p>
+      </div>
+
+      <div class="cities">
+        <div class="item">
+          <img
+            class="city"
+            src="../static/Mauritius/Port Louis/blue_penny_museum.jpg"
+            alt="blue_penny_museum"
+          />
+          <span class="captions">Blue_Penny_Museum</span>
+        </div>
+
+        <div class="item">
+          <img
+            class="city"
+            src="../static/Mauritius/Port Louis/jummah_masjid.jpg"
+            alt="jummah_masjid"
+          />
+          <span class="captions">Jummah_Masjid</span>
+        </div>
+
+        <div class="item">
+          <img
+            class="city"
+            src="../static/Mauritius/Port Louis/pieter_both_mountain.jpg"
+            alt="pieter_both_mountain"
+          />
+          <span class="captions">Pieter_Both_Mountain</span>
+        </div>
+
+        <div class="item">
+          <img
+            class="city"
+            src="../static/Mauritius/Port Louis/sir_seewoosagur_ramgoolam_botanical_garden.jpg"
+            alt="sir_seewoosagur_ramgoolam_botanical_garden.jpg"
+          />
+          <span class="captions">SeewoosagurRamgoolam_Garden</span>
+        </div>
+      </div>
+      <div></div>
+    </div>
+
+    <!--Footer-->
+    <div class="bottom-container">
+      <div class="container">
+        <div style="margin: 5px 30px">
+          <img
+            class="certificate"
+            src="../static/Elements/PCI-certified-Logo.png"
+          />
+        </div>
+        <div
+          style="
+            margin: 5px 30px 5px 0;
+            border-right: 1px solid rgb(143, 87, 87);
+          "
+        >
+          <img
+            class="certificateverisign"
+            src="../static/Elements/verisign.png"
+          />
+        </div>
+        <div class="bottom-middle">
+          <p style="padding-top: 30px; color: brown">Connect with us:</p>
+        </div>
+        <div class="bottom-middle" style="margin: 30px 40px auto 10px">
+          <a href="https://www.facebook.com/profile.php?id=100074840077412" style="color: #3b5998;"><i class="fab fa-facebook-square fa-lg"></i></a>
+          <a href="https://twitter.com/Prathme38179368?t=MxRory4ygSyWuQnENPsiDg&s=09" style="color: #1da1f2;"><i class="fab fa-twitter-square fa-lg"></i></a>
+          <a href="https://youtube.com/channel/UCxgaa-Jpo_B0t8kCpGOLmmA" style="color: #ff0000;"><i class="fab fa-youtube fa-lg"></i></a>
+          <a href="https://www.instagram.com/protravelo/" style="color: #8a3ab9;"><i class="fab fa-instagram-square fa-lg"></i></a>
+        </div>
+        <div style="margin: auto 20px">
+          <img class="list" src="../static/Elements/visa.png" />
+          <img class="list" src="../static/Elements/mastercard.png" />
+          <img class="list" src="../static/Elements/american express.png" />
+          <img class="list" src="../static/Elements/dinersclub.png" />
+          <img class="list" src="../static/Elements/rupay.png" />
+          <img class="list" src="../static/Elements/emi.png" />
+          <img
+            class="list"
+            style="height: 90px"
+            src="../static/Elements/netbanking.png"
+          />
+        </div>
+      </div>
+    </div>
+    <div
+      style="height: 60px; text-align: center; background: rgb(221, 203, 203)"
+    >
+      <p style="color: rgb(192, 122, 122)">
+        Customer care number: 9852467312<br>
+        Copyright <i class="far fa-copyright"></i> 2021 Protravelo Online
+        Private Limited, India. All rights reserved
+      </p>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,61 @@
+body {
+  background-image: url("../Elements/background.jpg");
+  background-size: cover;
+}
+.skill1 {
+  height: 200px;
+  width: 25%;
+  margin-top: 10px;
+  float: left;
+  margin-right: 30px;
+}
+.skill1:hover {
+  width: 40%;
+  height: 300px;
+}
+.skill2 {
+  height: 200px;
+  width: 25%;
+  margin-top: 10px;
+  float: right;
+  margin-left: 30px;
+}
+.skill2:hover {
+  width: 40%;
+  height: 300px;
+}
+.skill-row1 {
+  width: 1000px;
+  height: 320px;
+  margin: 80px auto 150px auto;
+  text-align: left;
+  background-image: url("../Elements/div.jpg");
+  background-size: 1000px 1000px;
+}
+
+.skill-row2 {
+  width: 1000px;
+  height: 320px;
+  margin: 80px auto 150px auto;
+  text-align: left;
+  background-image: url("../Elements/div.jpg");
+  background-size: 1000px 1000px;
+}
+
+.centre {
+  text-align: center;
+  font-family: "Merriweather", serif;
+}
+h1 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 1000;
+  font-size: 50px;
+}
+#text {
+  font-size: 20px;
+}
+
+.country_name {
+  text-decoration: none;
+  color: black;
+}

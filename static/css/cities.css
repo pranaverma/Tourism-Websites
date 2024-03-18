@@ -1,0 +1,105 @@
+body {
+  background-image: url("../Elements/image3.jpg");
+}
+h1 {
+  text-align: center;
+  font-family: Apple Chancery, cursive;
+  font-size: 50px;
+}
+
+.WholeCity {
+  background-image: url("../Elements/city.jpg");
+  font-size: 30px;
+}
+h3 {
+  font-size: 60px;
+  color: white;
+  font: italic small-caps bold 40px/2 cursive;
+}
+h2 {
+  font-size: 50px;
+}
+.city {
+  height: 100px;
+  width: 120px;
+  float: left;
+  width: 25%;
+  padding: 5px;
+  border-radius: 50%;
+  transition: border-radius 1s;
+}
+.city:hover {
+  border-radius: 0px;
+  border: dotted white;
+}
+
+#country {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  height: 600px;
+}
+
+.pic_city {
+  width: 400px;
+  float: left;
+}
+
+div.item {
+  vertical-align: top;
+  display: inline-block;
+  text-align: center;
+  width: 350px;
+}
+.city {
+  width: 300px;
+  height: 250px;
+  background-color: black;
+}
+.caption {
+  display: block;
+}
+
+.cityInfo {
+  width: 900px;
+  height: 300px;
+  border: 5px solid black;
+  padding: 10px;
+  margin-left: 500px;
+}
+
+.top-container {
+  background: black !important;
+  opacity: 0.7;
+}
+.logo {
+  width: 80px;
+  height: 80px;
+  margin: auto 100px auto 80px;
+}
+.bottom-container {
+  background-color: rosybrown;
+  height: 90px;
+}
+.container {
+  width: 8000px;
+  height: 90px;
+  display: flex;
+}
+.certificate {
+  width: 100px;
+  height: 70px;
+}
+.certificateverisign {
+  width: 150px;
+  height: 80px;
+}
+.list {
+  width: 70px;
+  height: 40px;
+  margin: auto 5px;
+}
+.bottom-middle {
+  width: 130px;
+}

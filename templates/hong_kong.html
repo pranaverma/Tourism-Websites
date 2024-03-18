@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../static/css/cities.css" />
+    <title>Hong Kong</title>
+    <link rel="icon" href="../static/Elements/favicon.ico" />
+
+    <!-- Font Awesome -->
+    <script
+      src="https://kit.fontawesome.com/1b8fe30047.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- Bootstrap Scripts -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+      crossorigin="anonymous"
+    ></script>
+
+    <style>
+      .top-container {
+        background: black !important;
+        opacity: 0.7;
+      }
+      .logo {
+        width: 80px;
+        height: 80px;
+        margin: auto 100px auto 80px;
+      }
+      .bottom-container {
+        background-color: rosybrown;
+        height: 90px;
+      }
+      .container {
+        width: 8000px;
+        height: 90px;
+        display: flex;
+      }
+      .certificate {
+        width: 100px;
+        height: 70px;
+      }
+      .certificateverisign {
+        width: 150px;
+        height: 80px;
+      }
+      .list {
+        width: 70px;
+        height: 40px;
+        margin: auto 5px;
+      }
+      .bottom-middle {
+        width: 130px;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Header-->
+    <nav class="navbar navbar-expand-sm navbar-dark top-container">
+      <div class="container-fluid">
+        <img class="logo" src="../static/Elements/Logo.jpg" />
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item px-2">
+              <a
+                class="nav-link"
+                aria-current="page"
+                href="{{ url_for('home')}}"
+                >Home</a
+              >
+            </li>
+            <li class="nav-item px-4">
+              <a class="nav-link" href="{{ url_for('aboutus')}}">About Us</a>
+            </li>
+            <li class="nav-item px-2">
+              <a class="nav-link" href="{{ url_for('countries')}}">Countries</a>
+            </li>
+            <li class="nav-item dropdown px-4">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                id="navbarDropdown"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-haspopup="true"
+                aria-expanded="false"
+              >
+                Hotels
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="{{ url_for('australia_hotel')}}"
+                  >Australia</a
+                >
+                <a class="dropdown-item" href="{{ url_for('italy_hotel')}}"
+                  >Italy</a
+                >
+                <a
+                  class="dropdown-item"
+                  href="{{ url_for('switzerland_hotel')}}"
+                  >Switzerland</a
+                >
+                <a class="dropdown-item" href="{{ url_for('mauritius_hotel')}}"
+                  >Mauritius</a
+                >
+                <a class="dropdown-item" href="{{ url_for('france_hotel')}}"
+                  >France</a
+                >
+                <a class="dropdown-item" href="{{ url_for('greece_hotel')}}"
+                  >Greece</a
+                >
+                <a class="dropdown-item" href="{{ url_for('hong_kong_hotel')}}"
+                  >Hong Kong</a
+                >
+                <a class="dropdown-item" href="{{ url_for('uae_hotel')}}"
+                  >UAE</a
+                >
+              </div>
+            </li>
+            <li class="nav-item px-2">
+              <a class="nav-link" href="{{ url_for('travel_agent_register')}}"
+                >Travel Agent Registration</a
+              >
+            </li>
+            <li class="nav-item dropdown px-4">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                id="navbarDropdown"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-haspopup="true"
+                aria-expanded="false"
+              >
+                Packages
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a
+                  class="dropdown-item"
+                  href="{{ url_for('australia_package')}}"
+                  >Australia Package</a
+                >
+                <a class="dropdown-item" href="{{ url_for('italy_package')}}"
+                  >Italy Package</a
+                >
+                <a
+                  class="dropdown-item"
+                  href="{{ url_for('switzerland_package')}}"
+                  >Switzerland Package</a
+                >
+                <a
+                  class="dropdown-item"
+                  href="{{ url_for('mauritius_package')}}"
+                  >Mauritius Package</a
+                >
+                <a class="dropdown-item" href="{{ url_for('france_package')}}"
+                  >France Package</a
+                >
+                <a class="dropdown-item" href="{{ url_for('greece_package')}}"
+                  >Greece Package</a
+                >
+                <a
+                  class="dropdown-item"
+                  href="{{ url_for('hong_kong_package')}}"
+                  >Hong Kong Package</a
+                >
+                <a class="dropdown-item" href="{{ url_for('uae_package')}}"
+                  >UAE Package</a
+                >
+                <a
+                  class="dropdown-item"
+                  href="{{ url_for('italy_and_switzerland')}}"
+                  >Italy and Switzerland</a
+                >
+                <a class="dropdown-item" href="{{ url_for('greece_and_italy')}}"
+                  >Greece and Italy</a
+                >
+                <a class="dropdown-item" href="{{ url_for('classical_europe')}}"
+                  >Classical Europe</a
+                >
+                <a class="dropdown-item" href="{{ url_for('fantastic_four')}}"
+                  >Fantastic Four</a
+                >
+              </div>
+            </li>
+          </ul>
+          <ul class="navbar-nav navbar-right">
+            <li></li>
+            <li>
+              <i class="nav-link fas fa-user-plus fa-lg"></i
+              ><a class="nav-link" href="{{ url_for('admin')}}"> Sign Up</a>
+            </li>
+            <li class="px-1">
+              <i class="nav-link fas fa-sign-in-alt fa-lg"></i
+              ><a class="nav-link" href="{{ url_for('admin')}}"> Login</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- Header-->
+
+    <div>
+      <img
+        id="country"
+        src="../static/Countries/Hong Kong.jpg"
+        alt="Hong Kong image"
+      />
+      <h1>Hong Kong</h1>
+    </div>
+    <h2>Cities</h2>
+    <div class="WholeCity">
+      <h3>Lantau Island</h3>
+      <div>
+        <img class="pic_city" src="../static/HK cities/lantau_island.jpg" />
+
+        <p class="cityInfo">
+          The largest island of Hong Kong, Lantau Island sits at the heart of
+          the Pearl River in Hong Kong. The highlights of the island are
+          stunning Buddhist architectures, a famous theme park, long sandy
+          beaches and large shopping outlets amidst greenery and flora.
+        </p>
+      </div>
+
+      <div class="cities">
+        <div class="item">
+          <img
+            class="city"
+            src="../static/HK cities/lantau_island_disneyland.jpg"
+            alt="Disneyland"
+          />
+          <span class="captions">Disney_Land</span>
+        </div>
+
+        <div class="item">
+          <img
+            class="city"
+            src="../static/HK cities/lantau_island_big_buddha.jpg"
+            alt="Big_Buddha"
+          />
+          <span class="captions">Big_Buddha</span>
+        </div>
+
+        <div class="item">
+          <img
+            class="city"
+            src="../static/HK cities/lantau_island_mystic_manor.jpg"
+            alt="Mystic_Manor"
+          />
+          <span class="captions">Mystic_Manor</span>
+        </div>
+
+        <div class="item">
+          <img
+            class="city"
+            src="../static/HK cities/lantau_island_skyrail_tour.jpg"
+            alt="Skyrail_tour"
+          />
+          <span class="captions">Skyrail_tour</span>
+        </div>
+      </div>
+      <div></div>
+    </div>
+
+    <div class="WholeCity">
+      <h3>Tsim Sha Tsui</h3>
+      <div>
+        <img class="pic_city" src="../static/HK cities/tsim_sha_tsui.jpg" />
+
+        <p class="cityInfo">
+          TsimShaTsui (abbreviation TST) is the most vibrant area in Kowloon,
+          and probably in all Hong Kong. It is located in the southern part of
+          Kowloon Peninsula facing to Hong Kong Island. Its area is surrounded
+          from the east, south and west by Victoria Harbour, and from the north,
+          after Austin Road, by the Yau Ma Tei area. TsimShaTsui in Chinese
+          means pointed sandy mouth.
+        </p>
+      </div>
+
+      <div class="cities">
+        <div class="item">
+          <img
+            class="city"
+            src="../static/HK cities/tsim_sha_tsui_avenue_of_stars.jpg"
+            alt="avenue_of_stars"
+          />
+          <span class="captions">avenue_of_stars</span>
+        </div>
+
+        <div class="item">
+          <img
+            class="city"
+            src="../static/HK cities/tsim_sha_tsui_victoria_harbour.jpg"
+            alt="victoria_harbour"
+          />
+          <span class="captions">victoria_harbour</span>
+        </div>
+
+        <div class="item">
+          <img
+            class="city"
+            src="../static/HK cities/tsim_sha_tsui_science_museum.jpg"
+            alt="science_museum"
+          />
+          <span class="captions">science_museum</span>
+        </div>
+
+        <div class="item">
+          <img
+            class="city"
+            src="../static/HK cities/tsim_sha_tsui_kawloon_park.jpg"
+            alt="kawloon_park"
+          />
+          <span class="captions">kawloon_park</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="WholeCity">
+      <h3>Kowloon</h3>
+      <div>
+        <img class="pic_city" src="../static/HK cities/kowloon.jpg" />
+
+        <p class="cityInfo">
+          Kowloon City is an old district in Hong Kong; however, it has been
+          transforming into a modern district with a lot of new shops and
+          restaurants over the years. The district is well known for its wide
+          range of cuisine. Other than the traditional Hong Kong-style
+          restaurants that offer local dishes, there are numerous restaurants
+          that offer Southeast Asian dishes like Thai Indonesian.
+        </p>
+      </div>
+
+      <div class="cities">
+        <div class="item">
+          <img
+            class="city"
+            src="../static/HK cities/kowloon_chi_lin_nunnery.jpg"
+            alt="chi_lin_nunnery"
+          />
+          <span class="captions">Chi_lin_nunnery</span>
+        </div>
+
+        <div class="item">
+          <img
+            class="city"
+            src="../static/HK cities/kowloon_clock_tower.jpg"
+            alt="Clock_tower"
+          />
+          <span class="captions">Clock_tower</span>
+        </div>
+
+        <div class="item">
+          <img
+            class="city"
+            src="../static/HK cities/kowloon_space_museum.jpg"
+            alt="Space_Museum"
+          />
+          <span class="captions">Space_Museum</span>
+        </div>
+
+        <div class="item">
+          <img
+            class="city"
+            src="../static/HK cities/kowloon_wong_tai_sin_temple.jpg"
+            alt="Wong_tai_sin_temple"
+          />
+          <span class="captions">Wong_tai_sin_temple</span>
+        </div>
+      </div>
+      <div></div>
+    </div>
+
+    <div class="WholeCity">
+      <h3>Repulse Bay</h3>
+      <div>
+        <img class="pic_city" src="../static/HK cities/repulse_bay.jpg" />
+
+        <p class="cityInfo">
+          The Repulse Bay showcases the colonial architecture from the 1920s and
+          houses the Hong Kong Life Saving Society clubhouse which towers twin
+          statues of Chinese deities Kuan Yin and Tin Hau decorating the garden
+          near the beach. There is a lighthouse near the beach which makes for a
+          picturesque place.
+        </p>
+      </div>
+
+      <div class="cities">
+        <div class="item">
+          <img
+            class="city"
+            src="../static/HK cities/repulse_bay_longevity.jpg"
+            alt="Longevity"
+          />
+          <span class="captions">Longevity</span>
+        </div>
+
+        <div class="item">
+          <img
+            class="city"
+            src="../static/HK cities/repulse_bay_pulse.jpg"
+            alt="The_Pulse"
+          />
+          <span class="captions">The_Pulse</span>
+        </div>
+
+        <div class="item">
+          <img
+            class="city"
+            src="../static/HK cities/repulse_bay_tin_hau_temple.jpg"
+            alt="Tin_hau_temple"
+          />
+          <span class="captions">Tin_hau_temple</span>
+        </div>
+
+        <div class="item">
+          <img
+            class="city"
+            src="../static/HK cities/repulse_bay_skyline.jpg"
+            alt="Skyline"
+          />
+          <span class="captions">Skyline</span>
+        </div>
+      </div>
+      <div></div>
+    </div>
+
+    <!--Footer-->
+    <div class="bottom-container">
+      <div class="container">
+        <div style="margin: 5px 30px">
+          <img
+            class="certificate"
+            src="../static/Elements/PCI-certified-Logo.png"
+          />
+        </div>
+        <div
+          style="
+            margin: 5px 30px 5px 0;
+            border-right: 1px solid rgb(143, 87, 87);
+          "
+        >
+          <img
+            class="certificateverisign"
+            src="../static/Elements/verisign.png"
+          />
+        </div>
+        <div class="bottom-middle">
+          <p style="padding-top: 30px; color: brown">Connect with us:</p>
+        </div>
+        <div class="bottom-middle" style="margin: 30px 40px auto 10px">
+          <a href="https://www.facebook.com/profile.php?id=100074840077412" style="color: #3b5998;"><i class="fab fa-facebook-square fa-lg"></i></a>
+          <a href="https://twitter.com/Prathme38179368?t=MxRory4ygSyWuQnENPsiDg&s=09" style="color: #1da1f2;"><i class="fab fa-twitter-square fa-lg"></i></a>
+          <a href="https://youtube.com/channel/UCxgaa-Jpo_B0t8kCpGOLmmA" style="color: #ff0000;"><i class="fab fa-youtube fa-lg"></i></a>
+          <a href="https://www.instagram.com/protravelo/" style="color: #8a3ab9;"><i class="fab fa-instagram-square fa-lg"></i></a>
+        </div>
+        <div style="margin: auto 20px">
+          <img class="list" src="../static/Elements/visa.png" />
+          <img class="list" src="../static/Elements/mastercard.png" />
+          <img class="list" src="../static/Elements/american express.png" />
+          <img class="list" src="../static/Elements/dinersclub.png" />
+          <img class="list" src="../static/Elements/rupay.png" />
+          <img class="list" src="../static/Elements/emi.png" />
+          <img
+            class="list"
+            style="height: 90px"
+            src="../static/Elements/netbanking.png"
+          />
+        </div>
+      </div>
+    </div>
+    <div
+      style="height: 60px; text-align: center; background: rgb(221, 203, 203)"
+    >
+      <p style="color: rgb(192, 122, 122)">
+        Customer care number: 9852467312<br>
+        Copyright <i class="far fa-copyright"></i> 2021 Protravelo Online
+        Private Limited, India. All rights reserved
+      </p>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+      crossorigin="anonymous"
+    ></script>
+    <title>Countries</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@1,300&family=Montserrat&family=Sacramento&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../static/css/countries.css" />
+
+    <link rel="icon" href="favicon.ico" />
+
+    <script
+      src="https://kit.fontawesome.com/1b8fe30047.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <style>
+      .top-container {
+        background: black !important;
+        opacity: 0.7;
+      }
+      .logo {
+        width: 80px;
+        height: 80px;
+        margin: auto 100px auto 80px;
+      }
+      .bottom-container {
+        background-color: rosybrown;
+        height: 90px;
+      }
+      .container {
+        width: 8000px;
+        height: 90px;
+        display: flex;
+      }
+      .certificate {
+        width: 100px;
+        height: 70px;
+      }
+      .certificateverisign {
+        width: 150px;
+        height: 80px;
+      }
+      .list {
+        width: 70px;
+        height: 40px;
+        margin: auto 5px;
+      }
+      .bottom-middle {
+        width: 130px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- Header-->
+    <nav class="navbar navbar-expand-sm navbar-dark top-container">
+      <div class="container-fluid">
+        <img class="logo" src="../static/Elements/Logo.jpg" />
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item px-2">
+              <a
+                class="nav-link"
+                aria-current="page"
+                href="{{ url_for('home')}}"
+                >Home</a
+              >
+            </li>
+            <li class="nav-item px-4">
+              <a class="nav-link" href="{{ url_for('aboutus')}}">About Us</a>
+            </li>
+            <li class="nav-item px-2">
+              <a class="nav-link" href="{{ url_for('countries')}}">Countries</a>
+            </li>
+            <li class="nav-item dropdown px-4">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                id="navbarDropdown"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-haspopup="true"
+                aria-expanded="false"
+              >
+                Hotels
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="{{ url_for('australia_hotel')}}"
+                  >Australia</a
+                >
+                <a class="dropdown-item" href="{{ url_for('italy_hotel')}}"
+                  >Italy</a
+                >
+                <a
+                  class="dropdown-item"
+                  href="{{ url_for('switzerland_hotel')}}"
+                  >Switzerland</a
+                >
+                <a class="dropdown-item" href="{{ url_for('mauritius_hotel')}}"
+                  >Mauritius</a
+                >
+                <a class="dropdown-item" href="{{ url_for('france_hotel')}}"
+                  >France</a
+                >
+                <a class="dropdown-item" href="{{ url_for('greece_hotel')}}"
+                  >Greece</a
+                >
+                <a class="dropdown-item" href="{{ url_for('hong_kong_hotel')}}"
+                  >Hong Kong</a
+                >
+                <a class="dropdown-item" href="{{ url_for('uae_hotel')}}"
+                  >UAE</a
+                >
+              </div>
+            </li>
+            <li class="nav-item px-2">
+              <a class="nav-link" href="{{ url_for('travel_agent_register')}}"
+                >Travel Agent Registration</a
+              >
+            </li>
+            <li class="nav-item dropdown px-4">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                id="navbarDropdown"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-haspopup="true"
+                aria-expanded="false"
+              >
+                Packages
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a
+                  class="dropdown-item"
+                  href="{{ url_for('australia_package')}}"
+                  >Australia Package</a
+                >
+                <a class="dropdown-item" href="{{ url_for('italy_package')}}"
+                  >Italy Package</a
+                >
+                <a
+                  class="dropdown-item"
+                  href="{{ url_for('switzerland_package')}}"
+                  >Switzerland Package</a
+                >
+                <a
+                  class="dropdown-item"
+                  href="{{ url_for('mauritius_package')}}"
+                  >Mauritius Package</a
+                >
+                <a class="dropdown-item" href="{{ url_for('france_package')}}"
+                  >France Package</a
+                >
+                <a class="dropdown-item" href="{{ url_for('greece_package')}}"
+                  >Greece Package</a
+                >
+                <a
+                  class="dropdown-item"
+                  href="{{ url_for('hong_kong_package')}}"
+                  >Hong Kong Package</a
+                >
+                <a class="dropdown-item" href="{{ url_for('uae_package')}}"
+                  >UAE Package</a
+                >
+                <a
+                  class="dropdown-item"
+                  href="{{ url_for('italy_and_switzerland')}}"
+                  >Italy and Switzerland</a
+                >
+                <a class="dropdown-item" href="{{ url_for('greece_and_italy')}}"
+                  >Greece and Italy</a
+                >
+                <a class="dropdown-item" href="{{ url_for('classical_europe')}}"
+                  >Classical Europe</a
+                >
+                <a class="dropdown-item" href="{{ url_for('fantastic_four')}}"
+                  >Fantastic Four</a
+                >
+              </div>
+            </li>
+          </ul>
+          <ul class="navbar-nav navbar-right">
+            <li></li>
+            <li>
+              <i class="nav-link fas fa-user-plus fa-lg"></i
+              ><a class="nav-link" href="{{ url_for('admin')}}"> Sign Up</a>
+            </li>
+            <li class="px-1">
+              <i class="nav-link fas fa-sign-in-alt fa-lg"></i
+              ><a class="nav-link" href="{{ url_for('admin')}}"> Login</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- Header-->
+
+    <div class="skills">
+      <br /><br />
+      <h1 class="centre">Countries</h1>
+
+      <div class="skill-row1">
+        <a href="{{ url_for('australia')}}">
+          <img class="skill1" src="../static/Countries/australia_main.jpg" />
+        </a>
+
+        <br /><br />
+
+        <h1>
+          <a href="{{ url_for('australia')}}" class="country_name">Australia</a>
+        </h1>
+        <p id="text">
+          Australia is world famous for its natural wonders and wide open
+          spaces, its beaches, deserts, "the bush", and "the Outback". Australia
+          is one of the world's most highly urbanised countries; it is well
+          known for the attractions of its large cities such as Sydney,
+          Melbourne, Brisbane, and Perth.
+        </p>
+      </div>
+
+      <div class="skill-row2">
+        <a href="{{ url_for('italy')}}">
+          <img class="skill2" src="../static/Countries/italy_main.jpg" />
+        </a>
+
+        <br /><br />
+
+        <h1><a href="{{ url_for('italy')}}" class="country_name">Italy</a></h1>
+        <p id="text">
+          Italy is famous for its huge contributions to the worlds of art,
+          architecture, fashion, opera, literature, design, and film – the list
+          goes on, and we haven't even mentioned the food yet. ... Despite its
+          young age – and its relative size – Italy has made a big impression on
+          the international stage.
+        </p>
+      </div>
+
+      <div class="skill-row1">
+        <a href="{{ url_for('switzerland')}}">
+          <img class="skill1" src="../static/Countries/switzerland_main.jpg" />
+        </a>
+
+        <br /><br />
+
+        <h1>
+          <a href="{{ url_for('switzerland')}}" class="country_name"
+            >Switzerland</a
+          >
+        </h1>
+        <p id="text">
+          Switzerland is a land of stereotypes – expansive greenery, picturesque
+          landscapes, chocolate, cheese, and watches. Switzerland’s lush green
+          vistas are so perfect that they seem to be plucked out of a postcard.
+          It truly is one of the most beautiful places on Earth.
+        </p>
+      </div>
+
+      <div class="skill-row2">
+        <a href="{{ url_for('mauritius')}}">
+          <img class="skill2" src="../static/Countries/mauritius_main.jpg" />
+        </a>
+
+        <br /><br />
+
+        <h1>
+          <a href="{{ url_for('mauritius')}}" class="country_name">Mauritius</a>
+        </h1>
+        <p id="text">
+          Calling Mauritius an island paradise is an understatement; with white
+          sandy beaches, lush green foliage, turquoise blue waters, lavish
+          resorts, Mauritius is the perfect honeymoon destination. Being a
+          volcanically erupted island, it's completely surrounded by vast and
+          colourful coral reefs making it an ideal place for snorkelling and
+          scuba diving.
+        </p>
+      </div>
+
+      <div class="skill-row1">
+        <a href="{{ url_for('france')}}">
+          <img class="skill1" src="../static/Countries/france_main.jpg" />
+        </a>
+
+        <br /><br />
+
+        <h1>
+          <a href="{{ url_for('france')}}" class="country_name">France</a>
+        </h1>
+        <p id="text">
+          Renowned as world's most famous and most visited tourist destination,
+          France is nestled in Western Europe holding some of the greatest
+          treasure troves. The country is an irresistible assortment of picture
+          perfect landscapes, cultural foible, remarkable fashion sense,
+          historical bequest and of course adventures.
+        </p>
+      </div>
+
+      <div class="skill-row2">
+        <a href="{{ url_for('greece')}}">
+          <img class="skill2" src="../static/Countries/greece_main.jpg" />
+        </a>
+
+        <br /><br />
+
+        <h1>
+          <a href="{{ url_for('greece')}}" class="country_name">Greece</a>
+        </h1>
+        <p id="text">
+          Surrounded by crystal blue waters all around, Greece has 2000 islands
+          among which only 160 are inhabited. It has everything that a traveller
+          could ask for, starting from history and culture, huge mountains,
+          golden beaches and ancient ruins. Along with the history, the culture
+          in music, food and festivals is strongly held up high here.
+        </p>
+      </div>
+
+      <div class="skill-row1">
+        <a href="{{ url_for('hong_kong')}}">
+          <img class="skill1" src="../static/Countries/hong_kong_main.jpg" />
+        </a>
+
+        <br /><br />
+
+        <h1>
+          <a href="{{ url_for('hong_kong')}}" class="country_name">Hong Kong</a>
+        </h1>
+        <p id="text">
+          Hong Kong, officially known as the Special Administrative Region of
+          the People’s Republic of China is a burst of culture and colour.
+          Housing 18 districts, Hong Kong is one of the most heavily populous
+          regions in the world and the city with the most number of skyscrapers
+          in the world.
+        </p>
+      </div>
+
+      <div class="skill-row2">
+        <a href="{{ url_for('uae')}}">
+          <img class="skill2" src="../static/Countries/UAE_main.jpg" />
+        </a>
+
+        <br /><br />
+
+        <h1><a href="{{ url_for('uae')}}" class="country_name">U.A.E.</a></h1>
+        <p id="text">
+          A federation of seven emirates United Arab Emirates (UAE) is a
+          charismatic country on the Eastern side of the Arabian Peninsula.All
+          over the world, UAE is famed for housing the tallest building in the
+          world, The Burj Khalifa. A trip up to the observational deck offers
+          heart-stopping and alluring vistas of Dubai’s skyline.
+        </p>
+      </div>
+    </div>
+
+    <!--Footer-->
+    <div class="bottom-container">
+      <div class="container">
+        <div style="margin: 5px 30px">
+          <img
+            class="certificate"
+            src="../static/Elements/PCI-certified-Logo.png"
+          />
+        </div>
+        <div
+          style="
+            margin: 5px 30px 5px 0;
+            border-right: 1px solid rgb(143, 87, 87);
+          "
+        >
+          <img
+            class="certificateverisign"
+            src="../static/Elements/verisign.png"
+          />
+        </div>
+        <div class="bottom-middle">
+          <p style="padding-top: 30px; color: brown">Connect with us:</p>
+        </div>
+        <div class="bottom-middle" style="margin: 30px 40px auto 10px">
+          <a href="https://www.facebook.com/profile.php?id=100074840077412" style="color: #3b5998;"><i class="fab fa-facebook-square fa-lg"></i></a>
+          <a href="https://twitter.com/Prathme38179368?t=MxRory4ygSyWuQnENPsiDg&s=09" style="color: #1da1f2;"><i class="fab fa-twitter-square fa-lg"></i></a>
+          <a href="https://youtube.com/channel/UCxgaa-Jpo_B0t8kCpGOLmmA" style="color: #ff0000;"><i class="fab fa-youtube fa-lg"></i></a>
+          <a href="https://www.instagram.com/protravelo/" style="color: #8a3ab9;"><i class="fab fa-instagram-square fa-lg"></i></a>
+        </div>
+        <div style="margin: auto 20px">
+          <img class="list" src="../static/Elements/visa.png" />
+          <img class="list" src="../static/Elements/mastercard.png" />
+          <img class="list" src="../static/Elements/american express.png" />
+          <img class="list" src="../static/Elements/dinersclub.png" />
+          <img class="list" src="../static/Elements/rupay.png" />
+          <img class="list" src="../static/Elements/emi.png" />
+          <img
+            class="list"
+            style="height: 90px"
+            src="../static/Elements/netbanking.png"
+          />
+        </div>
+      </div>
+    </div>
+    <div
+      style="height: 60px; text-align: center; background: rgb(221, 203, 203)"
+    >
+      <p style="color: rgb(192, 122, 122)">
+        Customer care number: 9852467312<br>
+        Copyright <i class="far fa-copyright"></i> 2021 Protravelo Online
+        Private Limited, India. All rights reserved
+      </p>
+    </div>
+  </body>
+</html>

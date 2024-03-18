@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../static/css/cities.css" />
+    <title>Australia</title>
+    <link rel="icon" href="../static/Elements/favicon.ico" />
+
+    <!-- Font Awesome -->
+    <script
+      src="https://kit.fontawesome.com/1b8fe30047.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- Bootstrap Scripts -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+      crossorigin="anonymous"
+    ></script>
+
+    <style>
+      .top-container {
+        background: black !important;
+        opacity: 0.7;
+      }
+      .logo {
+        width: 80px;
+        height: 80px;
+        margin: auto 100px auto 80px;
+      }
+      .bottom-container {
+        background-color: rosybrown;
+        height: 90px;
+      }
+      .container {
+        width: 8000px;
+        height: 90px;
+        display: flex;
+      }
+      .certificate {
+        width: 100px;
+        height: 70px;
+      }
+      .certificateverisign {
+        width: 150px;
+        height: 80px;
+      }
+      .list {
+        width: 70px;
+        height: 40px;
+        margin: auto 5px;
+      }
+      .bottom-middle {
+        width: 130px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- Header-->
+    <nav class="navbar navbar-expand-sm navbar-dark top-container">
+      <div class="container-fluid">
+        <img class="logo" src="../static/Elements/Logo.jpg" />
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item px-2">
+              <a
+                class="nav-link"
+                aria-current="page"
+                href="{{ url_for('home')}}"
+                >Home</a
+              >
+            </li>
+            <li class="nav-item px-4">
+              <a class="nav-link" href="{{ url_for('aboutus')}}">About Us</a>
+            </li>
+            <li class="nav-item px-2">
+              <a class="nav-link" href="{{ url_for('countries')}}">Countries</a>
+            </li>
+            <li class="nav-item dropdown px-4">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                id="navbarDropdown"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-haspopup="true"
+                aria-expanded="false"
+              >
+                Hotels
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="{{ url_for('australia_hotel')}}"
+                  >Australia</a
+                >
+                <a class="dropdown-item" href="{{ url_for('italy_hotel')}}"
+                  >Italy</a
+                >
+                <a
+                  class="dropdown-item"
+                  href="{{ url_for('switzerland_hotel')}}"
+                  >Switzerland</a
+                >
+                <a class="dropdown-item" href="{{ url_for('mauritius_hotel')}}"
+                  >Mauritius</a
+                >
+                <a class="dropdown-item" href="{{ url_for('france_hotel')}}"
+                  >France</a
+                >
+                <a class="dropdown-item" href="{{ url_for('greece_hotel')}}"
+                  >Greece</a
+                >
+                <a class="dropdown-item" href="{{ url_for('hong_kong_hotel')}}"
+                  >Hong Kong</a
+                >
+                <a class="dropdown-item" href="{{ url_for('uae_hotel')}}"
+                  >UAE</a
+                >
+              </div>
+            </li>
+            <li class="nav-item px-2">
+              <a class="nav-link" href="{{ url_for('travel_agent_register')}}"
+                >Travel Agent Registration</a
+              >
+            </li>
+            <li class="nav-item dropdown px-4">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                id="navbarDropdown"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-haspopup="true"
+                aria-expanded="false"
+              >
+                Packages
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a
+                  class="dropdown-item"
+                  href="{{ url_for('australia_package')}}"
+                  >Australia Package</a
+                >
+                <a class="dropdown-item" href="{{ url_for('italy_package')}}"
+                  >Italy Package</a
+                >
+                <a
+                  class="dropdown-item"
+                  href="{{ url_for('switzerland_package')}}"
+                  >Switzerland Package</a
+                >
+                <a
+                  class="dropdown-item"
+                  href="{{ url_for('mauritius_package')}}"
+                  >Mauritius Package</a
+                >
+                <a class="dropdown-item" href="{{ url_for('france_package')}}"
+                  >France Package</a
+                >
+                <a class="dropdown-item" href="{{ url_for('greece_package')}}"
+                  >Greece Package</a
+                >
+                <a
+                  class="dropdown-item"
+                  href="{{ url_for('hong_kong_package')}}"
+                  >Hong Kong Package</a
+                >
+                <a class="dropdown-item" href="{{ url_for('uae_package')}}"
+                  >UAE Package</a
+                >
+                <a
+                  class="dropdown-item"
+                  href="{{ url_for('italy_and_switzerland')}}"
+                  >Italy and Switzerland</a
+                >
+                <a class="dropdown-item" href="{{ url_for('greece_and_italy')}}"
+                  >Greece and Italy</a
+                >
+                <a class="dropdown-item" href="{{ url_for('classical_europe')}}"
+                  >Classical Europe</a
+                >
+                <a class="dropdown-item" href="{{ url_for('fantastic_four')}}"
+                  >Fantastic Four</a
+                >
+              </div>
+            </li>
+          </ul>
+          <ul class="navbar-nav navbar-right">
+            <li></li>
+            <li>
+              <i class="nav-link fas fa-user-plus fa-lg"></i
+              ><a class="nav-link" href="{{ url_for('admin')}}"> Sign Up</a>
+            </li>
+            <li class="px-1">
+              <i class="nav-link fas fa-sign-in-alt fa-lg"></i
+              ><a class="nav-link" href="{{ url_for('admin')}}"> Login</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- Header-->
+
+    <div>
+      <img
+        id="country"
+        src="../static/Countries/australia.jpg"
+        alt="Australia image"
+      />
+      <h1>Australia</h1>
+    </div>
+
+    <h2>Cities</h2>
+
+    <div class="WholeCity">
+      <h3>Sydney</h3>
+      <div>
+        <img class="pic_city" src="../static/Australia/sydney.jpg" />
+
+        <p class="cityInfo">
+          Sydney is a lovely Australian city, with a hot summer sun and loads of
+          places to make the most of it. Beautiful gardens, iconic monuments,
+          famous localities and the best beaches to get a tan on, a short trip
+          to Sydney will have your travel bug well satisfied. The most populous
+          city in the country, this metropolis has more than enough to offer for
+          every type of traveller.
+        </p>
+      </div>
+
+      <div class="cities">
+        <div class="item">
+          <img
+            class="city"
+            src="../static/Australia/sydney(1).jpg"
+            alt="Sydney_Opera_House"
+          />
+          <span class="captions">Sydney_Opera_House</span>
+        </div>
+
+        <div class="item">
+          <img
+            class="city"
+            src="../static/Australia/sydney(2).jpg"
+            alt="Darling_Harbour"
+          />
+          <span class="captions">Darling_Harbour</span>
+        </div>
+
+        <div class="item">
+          <img
+            class="city"
+            src="../static/Australia/sydney(3).jpg"
+            alt="Bondi_Beach"
+          />
+          <span class="captions">Bondi_Beach</span>
+        </div>
+
+        <div class="item">
+          <img
+            class="city"
+            src="../static/Australia/sydney(4).jpg"
+            alt="Sydney_Harbour_Bridge"
+          />
+          <span class="captions">Sydney_Harbour_Bridge</span>
+        </div>
+      </div>
+      <div></div>
+    </div>
+
+    <div class="WholeCity">
+      <h3>Melbourne</h3>
+      <div>
+        <img class="pic_city" src="../static/Australia/melbourne.jpg" />
+
+        <p class="cityInfo">
+          Melbourne is a fantastic Australian city on the southern coast of the
+          country. It is the capital of the state of Victoria, and Is second
+          only to Sydney in term's of population. This beautiful city is the
+          culturual hub of Australia, considered to be the most vibrant city in
+          the country. It has even ranked as the most liveable city in the world
+          for 5 years in a row by the Economist Intelligence Unit.
+        </p>
+      </div>
+
+      <div class="cities">
+        <div class="item">
+          <img
+            class="city"
+            src="../static/Australia/melbourne(1).jpg"
+            alt="Queen_Victoria_Market"
+          />
+          <span class="captions">Queen_Victoria_Market</span>
+        </div>
+
+        <div class="item">
+          <img
+            class="city"
+            src="../static/Australia/melbourne(2).jpg"
+            alt="Shrine_of_Remembrance"
+          />
+          <span class="captions">Shrine_of_Remembrance</span>
+        </div>
+
+        <div class="item">
+          <img
+            class="city"
+            src="../static/Australia/melbourne(3).jpg"
+            alt="MCG"
+          />
+          <span class="captions">MCG</span>
+        </div>
+
+        <div class="item">
+          <img
+            class="city"
+            src="../static/Australia/melbourne(4).jpg"
+            alt="Eureka_Tower"
+          />
+          <span class="captions">Eureka_Tower</span>
+        </div>
+      </div>
+      <div></div>
+    </div>
+
+    <div class="WholeCity">
+      <h3>Brisbane</h3>
+      <div>
+        <img class="pic_city" src="../static/Australia/brisbane.jpg" />
+
+        <p class="cityInfo">
+          Brisbane is the most populous city of Australia. Owing to its
+          subtropical weather, Brisbane is also the perfect city to soak up some
+          Australian sun! It is blessed with sunny days and a lot of action
+          happening around the city which makes it an uncomplicated, fun-loving
+          and a laid back place where everyone wants to be.
+        </p>
+      </div>
+
+      <div class="cities">
+        <div class="item">
+          <img
+            class="city"
+            src="../static/Australia/brisbane(1).jpg"
+            alt="Lone_Pine_Sanctuary"
+          />
+          <span class="captions">Lone_Pine_Sanctuary</span>
+        </div>
+
+        <div class="item">
+          <img
+            class="city"
+            src="../static/Australia/brisbane(2).jpg"
+            alt="Roma_Street_<br>Parklands"
+          />
+          <span class="captions">Roma_Street_<br />Parklands</span>
+        </div>
+
+        <div class="item">
+          <img
+            class="city"
+            src="../static/Australia/brisbane(3).jpg"
+            alt="Southbank_Parklands"
+          />
+          <span class="captions">Southbank_Parklands</span>
+        </div>
+
+        <div class="item">
+          <img
+            class="city"
+            src="../static/Australia/brisbane(4).jpg"
+            alt="Queensland_Cultural_Centre"
+          />
+          <span class="captions">Queensland_Cultural_Centre</span>
+        </div>
+      </div>
+      <div></div>
+    </div>
+
+    <div class="WholeCity">
+      <h3>Canberra</h3>
+      <div>
+        <img class="pic_city" src="../static/Australia/canberra.jpg" />
+
+        <p class="cityInfo">
+          There is no doubt that Canberra is the most vivid, cheerful and a
+          sensational city. The fact that it has a world-class standard in
+          wining and dining, Canberra automatically becomes the number one
+          choice when it comes to quality holidaying. Come enjoy the native
+          bushlands, monuments and galleries.
+        </p>
+      </div>
+
+      <div class="cities">
+        <div class="item">
+          <img
+            class="city"
+            src="../static/Australia/canberra(1).jpg"
+            alt="Australian_War_Memorial"
+          />
+          <span class="captions">Australian_War_Memorial</span>
+        </div>
+
+        <div class="item">
+          <img
+            class="city"
+            src="../static/Australia/canberra(2).jpg"
+            alt="Parliament_House"
+          />
+          <span class="captions">Parliament_House</span>
+        </div>
+
+        <div class="item">
+          <img
+            class="city"
+            src="../static/Australia/canberra(3).jpg"
+            alt="National_Gallery_of_Australia"
+          />
+          <span class="captions">National_Gallery_of_<br />Australia</span>
+        </div>
+
+        <div class="item">
+          <img
+            class="city"
+            src="../static/Australia/canberra(4).jpg"
+            alt="National_Museum_of_Australia"
+          />
+          <span class="captions">National_Museum_of_<br />Australia</span>
+        </div>
+      </div>
+      <div></div>
+    </div>
+
+    <!--Footer-->
+    <div class="bottom-container">
+      <div class="container">
+        <div style="margin: 5px 30px">
+          <img
+            class="certificate"
+            src="../static/Elements/PCI-certified-Logo.png"
+          />
+        </div>
+        <div
+          style="
+            margin: 5px 30px 5px 0;
+            border-right: 1px solid rgb(143, 87, 87);
+          "
+        >
+          <img
+            class="certificateverisign"
+            src="../static/Elements/verisign.png"
+          />
+        </div>
+        <div class="bottom-middle">
+          <p style="padding-top: 30px; color: brown">Connect with us:</p>
+        </div>
+        <div class="bottom-middle" style="margin: 30px 40px auto 10px">
+          <a href="https://www.facebook.com/profile.php?id=100074840077412" style="color: #3b5998;"><i class="fab fa-facebook-square fa-lg"></i></a>
+          <a href="https://twitter.com/Prathme38179368?t=MxRory4ygSyWuQnENPsiDg&s=09" style="color: #1da1f2;"><i class="fab fa-twitter-square fa-lg"></i></a>
+          <a href="https://youtube.com/channel/UCxgaa-Jpo_B0t8kCpGOLmmA" style="color: #ff0000;"><i class="fab fa-youtube fa-lg"></i></a>
+          <a href="https://www.instagram.com/protravelo/" style="color: #8a3ab9;"><i class="fab fa-instagram-square fa-lg"></i></a>
+        </div>
+        <div style="margin: auto 20px">
+          <img class="list" src="../static/Elements/visa.png" />
+          <img class="list" src="../static/Elements/mastercard.png" />
+          <img class="list" src="../static/Elements/american express.png" />
+          <img class="list" src="../static/Elements/dinersclub.png" />
+          <img class="list" src="../static/Elements/rupay.png" />
+          <img class="list" src="../static/Elements/emi.png" />
+          <img
+            class="list"
+            style="height: 90px"
+            src="../static/Elements/netbanking.png"
+          />
+        </div>
+      </div>
+    </div>
+    <div
+      style="height: 60px; text-align: center; background: rgb(221, 203, 203)"
+    >
+      <p style="color: rgb(192, 122, 122)">
+        Customer care number: 9852467312<br>
+        Copyright <i class="far fa-copyright"></i> 2021 Protravelo Online
+        Private Limited, India. All rights reserved
+      </p>
+    </div>
+  </body>
+</html>

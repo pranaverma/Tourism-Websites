@@ -1,0 +1,100 @@
+body {
+    background-image: url('../Elements/background.jpg');
+    background-size: cover;
+  }
+
+.image{
+    height: 260px;
+    width: 250px;
+    float: left;
+    margin-right: 30px;
+    border-radius: 10px;
+}
+
+.skill-row {
+    width: 1100px;
+    height: 250px;
+    margin :10px 200px;
+}
+
+.left{
+    float: left;
+    width: 800px;
+    height: 260px;
+    margin :80px auto  150px auto;
+    text-align: left;
+    border-radius: 10px;
+    background-image: url('../Elements/div.jpg');
+    background-size: 1000px 1000px;
+    background-color: white;
+}
+.right{
+    float: right;
+    width: 300px;
+    height: 260px;
+    margin :80px auto 150px auto;
+    text-align: center;
+    border-radius: 10px;
+    background-image: url('../Elements/div.jpg');
+    background-size: 1000px 1000px;
+    background-color: white;
+}
+
+hr { 
+    display: block;
+    margin-top: 0.5 em;
+    margin-bottom: 0.5 em;
+    margin-left: auto;
+    margin-right: auto;
+    border-style: inset;
+    border-width: 2px;
+  }
+p1{
+    font-size: 20px ;
+    font-weight: 700;
+}
+p2{
+    font-size: 15px ;
+    font-weight: 500;
+}
+
+.top-container {
+    background: black !important;
+    opacity: 0.7;
+}
+
+.logo {
+    width: 80px;
+    height: 80px;
+    margin: auto 100px auto 80px;
+}
+
+.bottom-container {
+    height: 90px;
+}
+
+.container {
+    width: 8000px;
+    height: 90px;
+    display: flex;
+}
+
+.certificate {
+    width: 100px;
+    height: 70px;
+}
+
+.certificateverisign {
+    width: 150px;
+    height: 80px;
+}
+
+.list {
+    width: 70px;
+    height: 40px;
+    margin: auto 5px;
+}
+
+.bottom-middle {
+    width: 130px;
+}

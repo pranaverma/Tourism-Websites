@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Booking</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Font Awesome -->
+    <script
+      src="https://kit.fontawesome.com/1b8fe30047.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- MATERIAL DESIGN ICONIC FONT -->
+    <link
+      rel="stylesheet"
+      href="../static/fonts/material-design-iconic-font/css/material-design-iconic-font.min.css"
+    />
+
+    <!-- STYLE CSS -->
+    <link rel="Stylesheet" href="../static/css/daterangepicker.css" />
+    <link rel="stylesheet" href="../static/css/booking.css" />
+  </head>
+
+  <body>
+    <div
+      class="wrapper"
+      style="
+        background-image: url('../static/images/bg-registration-form-3.jpg');
+      "
+    >
+      <div class="inner">
+        <form action="/bookingform" method="post">
+          <h3>Booking Form</h3>
+          <div class="form-group">
+            <div class="form-wrapper">
+              <label for="">Name:</label>
+              <div class="form-holder">
+                <i class="zmdi zmdi-account-o"></i>
+                <input type="text" class="form-control" required />
+              </div>
+            </div>
+            <div class="form-wrapper">
+              <label for="">Email:</label>
+              <div class="form-holder">
+                <i style="font-style: normal; font-size: 15px">@</i>
+                <input type="text" class="form-control" required />
+              </div>
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="form-wrapper">
+              <label for="">Start Date:</label>
+              <div class="form-holder">
+                <i class="zmdi zmdi-lock-outline"></i>
+                <input
+                  name="start_date"
+                  class="form-control js-datepicker"
+                  type="text"
+                  required
+                />
+              </div>
+            </div>
+            <div class="form-wrapper">
+              <label for="">Number of days:</label>
+              <div class="form-holder">
+                <i class="zmdi zmdi-account-o"></i>
+                <input
+                  type="number"
+                  class="form-control"
+                  name="number_of_days"
+                  required
+                />
+              </div>
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="form-wrapper">
+              <label for="">Country:</label>
+              <div class="form-holder select">
+                <select
+                  name="country"
+                  id="country"
+                  onchange="ChangeCountryList()"
+                  class="form-control"
+                >
+                  <option disabled="disabled" selected="selected">
+                    Choose option
+                  </option>
+                  <option value="Australia">Australia</option>
+                  <option value="Italy">Italy</option>
+                  <option value="Switzerland">Switzerland</option>
+                  <option value="Mauritius">Mauritius</option>
+                  <option value="France">France</option>
+                  <option value="Greece">Greece</option>
+                  <option value="Hong KOng">Hong Kong</option>
+                  <option value="UAE">UAE</option>
+                </select>
+                <i class="zmdi zmdi-pin"></i>
+              </div>
+            </div>
+            <div class="form-wrapper">
+              <label for="">Travel Agent: (For more info, <a href="https://instagram.com/protravelo?utm_medium=copy_link">click here</a>)</label>
+              <div class="form-holder select">
+                <select
+                  name="travel_agent"
+                  id="countryagent"
+                  class="form-control"
+                ></select>
+                <i class="zmdi zmdi-face"></i>
+              </div>
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="form-wrapper">
+              <label for="firstCity">City-1</label>
+              <div class="form-holder select">
+                <select
+                  name="city1"
+                  id="city1"
+                  onchange="ChangeCityList1()"
+                  class="form-control"
+                ></select>
+                <i class="fas fa-city"></i>
+              </div>
+            </div>
+            <div class="form-wrapper">
+              <label for="">Hotel:</label>
+              <div class="form-holder select">
+                <select name="firsthotel" id="firsthotel" class="form-control"></select>
+                <i class="fas fa-hotel"></i>
+              </div>
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="form-wrapper">
+              <label for="secondCity">City-2</label>
+              <div class="form-holder select">
+                <select
+                  name="city2"
+                  id="city2"
+                  onchange="ChangeCityList2()"
+                  class="form-control"
+                ></select>
+                <i class="fas fa-city"></i>
+              </div>
+            </div>
+            <div class="form-wrapper">
+              <label for="">Hotel:</label>
+              <div class="form-holder select">
+                <select name="secondhotel" id="secondhotel" class="form-control"></select>
+                <i class="fas fa-hotel"></i>
+              </div>
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="form-wrapper">
+              <label for="thirdCity">City-3</label>
+              <div class="form-holder select">
+                <select
+                  name="city3"
+                  id="city3"
+                  onchange="ChangeCityList3()"
+                  class="form-control"
+                ></select>
+                <i class="fas fa-city"></i>
+              </div>
+            </div>
+            <div class="form-wrapper">
+              <label for="">Hotel:</label>
+              <div class="form-holder select">
+                <select name="thirdhotel" id="thirdhotel" class="form-control"></select>
+                <i class="fas fa-hotel"></i>
+              </div>
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="form-wrapper">
+              <label for="fourthCity">City-4</label>
+              <div class="form-holder select">
+                <select
+                  name="city4"
+                  id="city4"
+                  onchange="ChangeCityList4()"
+                  class="form-control"
+                ></select>
+                <i class="fas fa-city"></i>
+              </div>
+            </div>
+            <div class="form-wrapper">
+              <label for="">Hotel:</label>
+              <div class="form-holder select">
+                <select name="fourthhotel" id="fourthhotel" class="form-control"></select>
+                <i class="fas fa-hotel"></i>
+              </div>
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="form-wrapper">
+              <label for="">Number Of People:</label>
+              <div class="form-holder">
+                <i class="zmdi zmdi-account-o"></i>
+                <input
+                  type="text"
+                  name="number_of_people"
+                  class="form-control"
+                  required
+                />
+              </div>
+            </div>
+            <div class="form-wrapper">
+              <label for="">Preferred Language (optional):</label>
+              <div class="form-holder">
+                <i class="fas fa-language"></i>
+                <input type="text" class="form-control" />
+              </div>
+            </div>
+          </div>
+          <div class="form-end">
+            <div class="checkbox">
+              <label>
+                <input type="checkbox" required /> I hereby declare that the
+                above information filled is correct to the best of my knowledge.
+                <span class="checkmark"></span>
+              </label>
+            </div>
+            <div class="button-holder">
+              <button>Submit</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <script src="../static/js/booking_form.js"></script>
+    <script src="../static/js/jquery.min.js"></script>
+    <script src="../static/js/moment.min.js"></script>
+    <script src="../static/js/daterangepicker.js"></script>
+    <script src="../static/js/global.js"></script>
+  </body>
+</html>

@@ -1,0 +1,342 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About Us</title>
+    <link rel="icon" href="../static/Elements/favicon.ico" />
+
+    <!-- Font Awesome -->
+    <script
+      src="https://kit.fontawesome.com/1b8fe30047.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- Bootstrap Scripts -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+      crossorigin="anonymous"
+    ></script>
+    <style>
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+        margin: 0;
+      }
+      html {
+        box-sizing: border-box;
+      }
+      *,
+      *:before,
+      *:after {
+        box-sizing: inherit;
+      }
+      .column {
+        float: left;
+        width: 25%;
+        margin-bottom: 16px;
+        padding: 0 8px;
+      }
+      .card {
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+        margin: 8px;
+      }
+      .about-section {
+        padding: 50px;
+        text-align: center;
+        background-color: #474e5d;
+        color: white;
+      }
+      .container {
+        padding: 0 16px;
+      }
+      .container::after,
+      .row::after {
+        content: "";
+        clear: both;
+        display: table;
+      }
+      .title {
+        color: grey;
+      }
+      @media screen and (max-width: 650px) {
+        .column {
+          width: 25%;
+          display: block;
+        }
+      }
+      .top-container {
+        background: black !important;
+        opacity: 0.7;
+      }
+      .logo {
+        width: 80px;
+        height: 80px;
+        margin: auto 100px auto 80px;
+      }
+      .bottom-container {
+        background-color: rosybrown;
+        height: 90px;
+      }
+      .containers {
+        width: 8000px;
+        height: 90px;
+        display: flex;
+      }
+      .certificate {
+        width: 100px;
+        height: 70px;
+      }
+      .certificateverisign {
+        width: 150px;
+        height: 80px;
+      }
+      .list {
+        width: 70px;
+        height: 40px;
+        margin: auto 5px;
+      }
+      .bottom-middle {
+        width: 130px;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Header-->
+    <nav style="z-index: 2;" class="navbar navbar-expand-sm navbar-dark top-container">
+      <div class="container-fluid">
+        <img class="logo" src="../static/Elements/Logo.jpg" />
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item px-2">
+              <a
+                class="nav-link"
+                aria-current="page"
+                href="{{ url_for('home')}}"
+                >Home</a
+              >
+            </li>
+            <li class="nav-item px-4">
+              <a class="nav-link" href="{{ url_for('aboutus')}}">About Us</a>
+            </li>
+            <li class="nav-item px-2">
+              <a class="nav-link" href="{{ url_for('countries')}}">Countries</a>
+            </li>
+            <li class="nav-item dropdown px-4">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                id="navbarDropdown"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-haspopup="true"
+                aria-expanded="false"
+              >
+                Hotels
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="{{ url_for('australia_hotel')}}"
+                  >Australia</a
+                >
+                <a class="dropdown-item" href="{{ url_for('italy_hotel')}}"
+                  >Italy</a
+                >
+                <a
+                  class="dropdown-item"
+                  href="{{ url_for('switzerland_hotel')}}"
+                  >Switzerland</a
+                >
+                <a class="dropdown-item" href="{{ url_for('mauritius_hotel')}}"
+                  >Mauritius</a
+                >
+                <a class="dropdown-item" href="{{ url_for('france_hotel')}}"
+                  >France</a
+                >
+                <a class="dropdown-item" href="{{ url_for('greece_hotel')}}"
+                  >Greece</a
+                >
+                <a class="dropdown-item" href="{{ url_for('hong_kong_hotel')}}"
+                  >Hong Kong</a
+                >
+                <a class="dropdown-item" href="{{ url_for('uae_hotel')}}"
+                  >UAE</a
+                >
+              </div>
+            </li>
+            <li class="nav-item px-2">
+              <a class="nav-link" href="{{ url_for('travel_agent_register')}}"
+                >Travel Agent Registration</a
+              >
+            </li>
+            <li class="nav-item dropdown px-4">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                id="navbarDropdown"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-haspopup="true"
+                aria-expanded="false"
+              >
+                Packages
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a
+                  class="dropdown-item"
+                  href="{{ url_for('australia_package')}}"
+                  >Australia Package</a
+                >
+                <a class="dropdown-item" href="{{ url_for('italy_package')}}"
+                  >Italy Package</a
+                >
+                <a
+                  class="dropdown-item"
+                  href="{{ url_for('switzerland_package')}}"
+                  >Switzerland Package</a
+                >
+                <a
+                  class="dropdown-item"
+                  href="{{ url_for('mauritius_package')}}"
+                  >Mauritius Package</a
+                >
+                <a class="dropdown-item" href="{{ url_for('france_package')}}"
+                  >France Package</a
+                >
+                <a class="dropdown-item" href="{{ url_for('greece_package')}}"
+                  >Greece Package</a
+                >
+                <a
+                  class="dropdown-item"
+                  href="{{ url_for('hong_kong_package')}}"
+                  >Hong Kong Package</a
+                >
+                <a class="dropdown-item" href="{{ url_for('uae_package')}}"
+                  >UAE Package</a
+                >
+                <a
+                  class="dropdown-item"
+                  href="{{ url_for('italy_and_switzerland')}}"
+                  >Italy and Switzerland</a
+                >
+                <a class="dropdown-item" href="{{ url_for('greece_and_italy')}}"
+                  >Greece and Italy</a
+                >
+                <a class="dropdown-item" href="{{ url_for('classical_europe')}}"
+                  >Classical Europe</a
+                >
+                <a class="dropdown-item" href="{{ url_for('fantastic_four')}}"
+                  >Fantastic Four</a
+                >
+              </div>
+            </li>
+          </ul>
+          <ul class="navbar-nav navbar-right">
+            <li></li>
+            <li>
+              <i class="nav-link fas fa-user-plus fa-lg"></i
+              ><a class="nav-link" href="{{ url_for('admin')}}"> Sign Up</a>
+            </li>
+            <li class="px-1">
+              <i class="nav-link fas fa-sign-in-alt fa-lg"></i
+              ><a class="nav-link" href="{{ url_for('admin')}}"> Login</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- Header-->
+    <div class="about-section">
+      <h1>About Us</h1>
+    </div>
+    <h2 style="text-align: center;color: blueviolet;font-size: 2em;">Our Team</h2>
+    <h3 style="text-align: justify; margin:auto 15px;">PROTRAVELO (India) Ltd. is an emerging tourism firm currently operating from India which provides services such as Travelling, Visa and Passport services, Currency Exchange, etc.The company was established in 2020.  </h3><br>
+    <h3 style="text-align: justify; margin:auto 15px;">This company operates from Mumbai, India but it has its offices across the world covering 8 countries and 3 continents. Our company is the one of the best travel service providers in India. It is giving tough competition to well established travel companies in India. It is expected to grow a lot more in the coming years when the COVID-19 pandemic will end. </h3><br>
+    <h3 style="text-align: justify; margin:auto 15px;">Our company has experienced a 20% growth in last year and its value will keep increasing in coming years. The company currently has 542 employees working around the world to provide the best travel services to its customers and in case if any issue arises it will be quickly solved.</h3><br>
+    <h3 style="text-align: justify; margin:auto 15px;">PROTRAVELO’s 80% shares are held by its 4 key members (founders of the company) and 20% are owned by McQueen India Ltd.</h3>
+    <h3 style="text-align: center;color: blue;">* Project completed under the guidance of Dr. Nagendra Kumar </h3>  
+    <br><br>
+    <div class="row">
+      <div class="column">
+        <div class="card">
+          <img src=".jpeg" alt="" style="width:100%"> <!--qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq-->
+          <div class="container">
+            <h2>Amaan Ullah Siddiqui</h2>
+            <p class="title">Web Programmer</p>
+            <p>Contact no. +91 7354941446</p>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+    <!--Footer-->
+    <div class="bottom-container">
+      <div class="containers">
+        <div style="margin: 5px 30px">
+          <img
+            class="certificate"
+            src="../static/Elements/PCI-certified-Logo.png"
+          />
+        </div>
+        <div
+          style="
+            margin: 5px 30px 5px 0;
+            border-right: 1px solid rgb(143, 87, 87);
+          "
+        >
+          <img
+            class="certificateverisign"
+            src="../static/Elements/verisign.png"
+          />
+        </div>
+        <div class="bottom-middle">
+          <p style="padding-top: 30px; color: brown">Connect with us:</p>
+        </div>
+        <div class="bottom-middle" style="margin: 30px 40px auto 10px">
+          <a href="https://www.facebook.com/profile.php?id=100074840077412" style="color: #3b5998;"><i class="fab fa-facebook-square fa-lg"></i></a>
+          <a href="https://twitter.com/Prathme38179368?t=MxRory4ygSyWuQnENPsiDg&s=09" style="color: #1da1f2;"><i class="fab fa-twitter-square fa-lg"></i></a>
+          <a href="https://youtube.com/channel/UCxgaa-Jpo_B0t8kCpGOLmmA" style="color: #ff0000;"><i class="fab fa-youtube fa-lg"></i></a>
+          <a href="https://www.instagram.com/protravelo/" style="color: #8a3ab9;"><i class="fab fa-instagram-square fa-lg"></i></a>
+        </div>
+        <div style="margin: auto 20px">
+          <img class="list" src="../static/Elements/visa.png" />
+          <img class="list" src="../static/Elements/mastercard.png" />
+          <img class="list" src="../static/Elements/american express.png" />
+          <img class="list" src="../static/Elements/dinersclub.png" />
+          <img class="list" src="../static/Elements/rupay.png" />
+          <img class="list" src="../static/Elements/emi.png" />
+          <img
+            class="list"
+            style="height: 90px"
+            src="../static/Elements/netbanking.png"
+          />
+        </div>
+      </div>
+    </div>
+    <div
+      style="height: 60px; text-align: center; background: rgb(221, 203, 203)"
+    >
+      <p style="color: rgb(192, 122, 122)">
+        Customer care number: 9852467312<br>
+        Copyright <i class="far fa-copyright"></i> 2021 Protravelo Online
+        Private Limited, India. All rights reserved
+      </p>
+    </div>
+  </body>
+</html>
